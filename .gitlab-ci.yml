@@ -4,6 +4,7 @@
 build:
   stage: build
   script:
-    - build.sh
+    - ls -la
+    - ./build.sh
 #    - docker build --pull -t "$CI_REGISTRY_IMAGE" .
 #    - docker push "$CI_REGISTRY_IMAGE"
