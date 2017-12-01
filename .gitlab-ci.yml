@@ -9,7 +9,7 @@ services:
 build:
   stage: build
   script:
-    - ls -la
+    - docker help
     - ./build.sh
 #    - docker build --pull -t "$CI_REGISTRY_IMAGE" .
 #    - docker push "$CI_REGISTRY_IMAGE"
