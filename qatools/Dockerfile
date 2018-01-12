@@ -11,6 +11,6 @@ RUN mkdir /opt/php-qa-tools && cd /opt/php-qa-tools \
     && wget http://static.phpmd.org/php/latest/phpmd.phar -O phpmd \
     && wget https://phar.phpunit.de/phpcpd.phar -O phpcpd \
     && wget https://github.com/theseer/phpdox/releases/download/0.9.0/phpdox-0.9.0.phar -O phpdox \
-    && wget http://get.sensiolabs.org/php-cs-fixer.phar -O php-cs-fixer \
+    && wget https://github.com/FriendsOfPHP/PHP-CS-Fixer/releases/download/v2.7.1/php-cs-fixer.phar -O php-cs-fixer \
     && chmod a+x /opt/php-qa-tools/*
 
