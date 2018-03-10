@@ -12,4 +12,5 @@ RUN apt-get install -y \
     libfontconfig
 RUN npm install npm -g \
     && npm install bower -g \
-    && npm install grunt-cli -g
+    && npm install grunt-cli -g \
+    && npm install gulp-cli -g
