@@ -7,7 +7,8 @@ RUN apt-get update -y
 RUN apt-get install -y \
     mysql-client \
     nodejs \
-    libfontconfig
+    libfontconfig \
+    bzip2
 RUN npm install npm -g \
     && npm install grunt-cli -g \
     && npm install gulp-cli -g
