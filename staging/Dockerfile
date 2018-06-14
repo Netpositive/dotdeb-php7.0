@@ -9,6 +9,6 @@ RUN apt-get install -y \
     nodejs \
     libfontconfig \
     bzip2
-RUN npm install npm -g \
-    && npm install grunt-cli -g \
-    && npm install gulp-cli -g
+RUN npm install npm@6.1 -g \
+    && npm install grunt-cli@1.2 -g \
+    && npm install gulp-cli@2.0 -g
