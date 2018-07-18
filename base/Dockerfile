@@ -10,10 +10,9 @@ RUN apt-get update && apt-get install -y \
 
 RUN echo "deb http://packages.dotdeb.org jessie all\ndeb-src http://packages.dotdeb.org jessie all" > /etc/apt/sources.list.d/dotdeb.list
 RUN wget http://www.dotdeb.org/dotdeb.gpg -O /tmp/dotdeb.gpg && apt-key add /tmp/dotdeb.gpg && rm /tmp/dotdeb.gpg
-RUN apt-get update
 
 # PHP
-RUN apt-get install -y \
+RUN apt-get update && apt-get install -y \
     git \
     php7.0-json \
     php7.0-curl \
@@ -25,10 +24,9 @@ RUN apt-get install -y \
     php7.0-mbstring \
     php7.0-bcmath \
     php7.0-soap \
-    php-intl
+    php-intl \
+    && rm -rf /var/lib/apt/lists/*
 
 # Composer
-RUN curl -sS https://getcomposer.org/installer | php \
-    && mv composer.phar /usr/local/bin/composer \
-    && chmod +x /usr/local/bin/composer
-
+COPY composer-install.sh /usr/local/bin
+RUN /usr/local/bin/composer-install.sh

@@ -13,4 +13,3 @@ RUN mkdir /opt/php-qa-tools && cd /opt/php-qa-tools \
     && wget https://github.com/theseer/phpdox/releases/download/0.9.0/phpdox-0.9.0.phar -O phpdox \
     && wget https://github.com/FriendsOfPHP/PHP-CS-Fixer/releases/download/v2.7.1/php-cs-fixer.phar -O php-cs-fixer \
     && chmod a+x /opt/php-qa-tools/*
-
